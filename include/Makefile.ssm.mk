@@ -56,13 +56,13 @@ modelutils_ssm_arch_rm:
 	rm -rf $(BUILDSSM)/$(MODELUTILS_SSMARCH_NAME)
 $(BUILDSSM)/$(MODELUTILS_SSMARCH_NAME):
 	mkdir -p $@/lib/$(EC_ARCH) ; \
-	ln -s $(EC_ARCH) $@/lib/$(COMP_ARCH) ; \
+	ln -s ./$(EC_ARCH)/. $@/lib/$(COMP_ARCH) ; \
 	touch $@/lib/libdummy_$(MODELUTILS_SSMARCH_NAME).a ; \
 	cd $(LIBDIR) ; \
 	rsync -av `ls libmodelutils*.a libmodelutils*.a.fl libmodelutils*.so 2>/dev/null` $@/lib/$(EC_ARCH)/ ; \
 	if [[ x$(MAKE_SSM_NOMOD) != x1 ]] ; then \
 		mkdir -p $@/include/$(EC_ARCH) ; \
-		ln -s $(EC_ARCH) $@/include/$(COMP_ARCH) ; \
+		ln -s ./$(EC_ARCH)/. $@/include/$(COMP_ARCH) ; \
 		touch $@/include/dummy_$(MODELUTILS_SSMARCH_NAME).inc ; \
 		cd $(MODDIR) ; \
 		cp $(MODELUTILS_MOD_FILES) $@/include/$(EC_ARCH) ; \
