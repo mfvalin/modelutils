@@ -41,7 +41,7 @@ module mu_jdate_mod
    integer, parameter, public :: MU_JDATE_LEAP_ON = 0
    integer, parameter, public :: MU_JDATE_LEAP_IGNORED = 1
    integer, parameter, public :: MU_JDATE_PDF_LEN = 16
-   integer(IDOUBLE), parameter, public :: MU_JDATE_MAX_INT = 464269103999
+   integer(IDOUBLE), parameter, public :: MU_JDATE_MAX_INT = 464269103999_8
    character(len=MU_JDATE_PDF_LEN), parameter, public :: MU_JDATE_MAX_STR = '99991231.235959'
    integer(IDOUBLE), parameter, public :: MU_JDATE_EPOCH_INT = 0
    character(len=MU_JDATE_PDF_LEN), parameter, public :: MU_JDATE_EPOCH_STR = '-47131124.000000'
