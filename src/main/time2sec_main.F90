@@ -11,9 +11,9 @@ subroutine time2sec_main()
   !  CCARD preparation
   integer, parameter :: NARGS=2
   character(len=STRLEN), dimension(NARGS) :: &
-       arglist =(/'time.'    ,'dt.'/), &
-       def     =(/'UNDEFINED','1.'/), &
-       val     =(/'UNDEFINED','1.'/)
+       arglist =(/'time.'    ,'dt.  '/), &
+       def     =(/'UNDEFINED','1.       '/), &
+       val     =(/'UNDEFINED','1.       '/)
 
   !  Internal variables
   integer :: npos,istat
